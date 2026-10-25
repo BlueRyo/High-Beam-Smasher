@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "browser": "156.0.4314.42",
+  "channel": "msedge",
+  "production": true,
+  "checks": [
+    "Ready screen waits for explicit start; Traditional Chinese controls render",
+    "All 30 real keyboard contacts match ordinary and double scoring, including errors",
+    "Low-frame-rate update crosses 25s without changing the actual pre-boundary hit score",
+    "Live resize to 1024 preserves 16:9, 480×270 coordinates and subsequent hit timing",
+    "Unlocked AudioContext runs and generates strike, glass, swing and final-phase sources",
+    "All 30 hits play bundled speech reactions; two distinct clips load and stale speech is stopped",
+    "Crossing 30s settles once: 20 high beams and 10 ordinary lights, no duplicate scoring",
+    "Restart clears scores/effects; holding Space and keyboard repeats never auto-attack",
+    "Space does not scroll; blur/visibility handlers and a long time jump still reach results",
+    "A further untouched round completes with zero penalties and no stale hits",
+    "Unavailable AudioContext still permits real hits, mute control and a completed round",
+    "Mobile touch completes all 30 hits via screen and attack button, survives rotation and replays",
+    "Only left mouse press attacks; right click and holding the button do not auto-swing",
+    "Touch in the last 20ms of a visible red frame hits after windup; recovery hides the cue and disables attack",
+    "Unmodified real-time clock completes a full no-input round in 30.67s",
+    "No browser exceptions or console errors"
+  ],
+  "errors": []
+}
