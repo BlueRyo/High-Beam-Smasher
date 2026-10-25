@@ -79,4 +79,4 @@ npm run test:browser
 
 ## GitHub Pages 部署準備
 
-新增 master 推送觸發的官方 GitHub Actions 工作流程，使用 Node.js 24、npm ci、規則測試、型別檢查與 Vite 建置，將 dist/ 上傳並部署。Vite 相對 base 已通過 `npm run test:pages`：在 `/High-Beam-Smasher/` 下確認 JS、CSS、圖示、兩段語音、手機紅框末段命中及首頁導覽均正常，無404或頁面例外。24個規則測試及正式建置重新通過。網站上線仍需儲存庫啟用 Pages，公開網址須於部署成功後確認。
+新增 master 推送觸發的官方 GitHub Actions 工作流程，使用 Node.js 24、npm ci、規則測試、型別檢查與 Vite 建置，將 dist/ 上傳並部署。Vite 相對 base 已通過 `npm run test:pages`：在 `/High-Beam-Smasher/` 下確認 JS、CSS、圖示、兩段語音、手機紅框末段命中及首頁導覽均正常，無404或頁面例外。24個規則測試及正式建置重新通過。儲存庫已改為公開並啟用 Pages，GitHub Actions 建置與部署均成功。公開網址 https://blueryo.github.io/High-Beam-Smasher/ 已以未登入的測試瀏覽器確認 HTTP 200、手機版型、JS／CSS、兩段語音、紅框末段觸控命中、結算與重玩，無資產載入失敗或頁面例外。

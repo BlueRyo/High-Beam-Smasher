@@ -1,5 +1,7 @@
 # 遠光燈粉碎者 / High Beam Smasher
 
+[立即試玩](https://blueryo.github.io/High-Beam-Smasher/) · 支援桌面與手機
+
 支援桌面與手機瀏覽器的第一人稱像素紓壓遊戲。每局30秒，看準遠光燈，以空白鍵、滑鼠左鍵或手指點按揮動左手鐵棍。
 
 ## 本機啟動
@@ -57,7 +59,7 @@ Windows 預設使用已安裝的 Microsoft Edge；其他系統使用 Playwright 
 
 部署目標：<https://blueryo.github.io/High-Beam-Smasher/>。
 
-`.github/workflows/pages.yml` 會在推送 master 或手動執行時安裝鎖定套件、執行規則測試與型別檢查、建置 dist/ 並部署 GitHub Pages。首次需要在儲存庫 Settings → Pages 將 Source 設為 GitHub Actions。儲存庫維持私人；私人儲存庫的 Pages 可用性取決於 GitHub 帳戶方案。
+`.github/workflows/pages.yml` 會在推送 master 或手動執行時安裝鎖定套件、執行規則測試與型別檢查、建置 dist/ 並部署 GitHub Pages。首次需要在儲存庫 Settings → Pages 將 Source 設為 GitHub Actions。此儲存庫已公開，並以 GitHub Actions 發布遊戲。
 
 Vite 採相對資產路徑，本機預覽與 `/High-Beam-Smasher/` 子路徑共用同一份產物。Windows 可用以下指令重跑子路徑驗證（使用已安裝的 Microsoft Edge）：
 
