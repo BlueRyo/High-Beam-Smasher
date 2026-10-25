@@ -1,5 +1,7 @@
 # 第一版驗收紀錄
 
+OpenSpec 已同步三份主規格並封存於 `openspec/changes/archive/2026-10-25-add-high-beam-smash-game/`，17項任務全部完成。
+
 日期：2026-10-25（Asia/Taipei）。變更：add-high-beam-smash-game。
 
 ## 執行環境與結果
@@ -74,3 +76,7 @@ npm run test:browser
 修正為輸入時鎖定範圍內最近的車，預備後仍可命中，保持實際接觸時刻計分與30秒截止。恢復期間紅框不顯示，按鈕不可用且顯示「揮棒回位中…」。補上窗口起點、中段、最後100／50／10毫秒、最近一般大燈誤擊及跨25秒倍率、回位狀態等回歸測試。
 
 瀏覽器另在手機模擬中於第一輛車窗口結束前20毫秒確認畫布確實存在紅框像素，再以真實觸控事件點擊，等待預備後確認得分／扣分、紅框消失、回位按鈕停用及恢復。截圖：[末段紅框](screenshots/late-red-frame.png)、[末段命中](screenshots/late-red-hit.png)。
+
+## GitHub Pages 部署準備
+
+新增 master 推送觸發的官方 GitHub Actions 工作流程，使用 Node.js 24、npm ci、規則測試、型別檢查與 Vite 建置，將 dist/ 上傳並部署。Vite 相對 base 已通過 `npm run test:pages`：在 `/High-Beam-Smasher/` 下確認 JS、CSS、圖示、兩段語音、手機紅框末段命中及首頁導覽均正常，無404或頁面例外。24個規則測試及正式建置重新通過。網站上線仍需儲存庫啟用 Pages，公開網址須於部署成功後確認。

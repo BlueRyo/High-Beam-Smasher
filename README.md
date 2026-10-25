@@ -52,3 +52,18 @@ Windows 預設使用已安裝的 Microsoft Edge；其他系統使用 Playwright 
 命中遠光燈時追加「Motherfucker!」，誤擊一般大燈時追加「Sorry.」語音，保留原有打擊音效。使用一般系統合成聲線 Microsoft David Desktop，並非 Samuel L. Jackson 的錄音或仿聲。語音 WAV 隨遊戲打包，不依賴瀏覽器語音服務；連續命中播放最新反應，靜音或重開會停止上一段。可在有此系統聲線的 Windows 執行 `powershell -File scripts/generate-voice.ps1` 重建。
 
 遠光燈語音加上強重音、短斷句、較低音高與輕度飽和失真，營造更兇的遊戲反應；「Sorry」維持原本語氣。
+
+## GitHub Pages
+
+部署目標：<https://blueryo.github.io/High-Beam-Smasher/>。
+
+`.github/workflows/pages.yml` 會在推送 master 或手動執行時安裝鎖定套件、執行規則測試與型別檢查、建置 dist/ 並部署 GitHub Pages。首次需要在儲存庫 Settings → Pages 將 Source 設為 GitHub Actions。儲存庫維持私人；私人儲存庫的 Pages 可用性取決於 GitHub 帳戶方案。
+
+Vite 採相對資產路徑，本機預覽與 `/High-Beam-Smasher/` 子路徑共用同一份產物。Windows 可用以下指令重跑子路徑驗證（使用已安裝的 Microsoft Edge）：
+
+```sh
+npm run build
+npm run test:pages
+```
+
+部署採用 [GitHub 官方 Pages 工作流程](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)，不需要另外保存個人存取權杖。
